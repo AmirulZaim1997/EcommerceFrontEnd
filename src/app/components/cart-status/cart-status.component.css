@@ -1,0 +1,11 @@
+cart-area d-n{
+    width: 5px;
+    height: 5px;
+    
+
+}
+.total{
+    font-size: 12px;
+    background-color: rgb(10, 10, 10);
+    border-color: white;
+}

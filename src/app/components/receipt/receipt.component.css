@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .receipt {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .order-details, .payment-details {
+    margin-bottom: 20px;
+  }
+  
+  .items {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .items ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .item-name {
+    flex: 1;
+  }
+  
+  .totals {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .payment-details {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }

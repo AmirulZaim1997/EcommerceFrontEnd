@@ -1,0 +1,31 @@
+<h1>Update Order Status</h1>
+<div class="form-container">
+    <form  class="formClass" action="/submit"  method="post" >
+    <label for="OrderTracking">Order Tracking ID</label>
+    <input type="text" id="OrderTracking"  name="OrderTracking" value={{orderhistory.orderTrackingNumber}} readonly>
+  <p></p>
+  <label for="dateorder">Date Order:</label>
+    <input type="text" id="dateorder" name="dateorder" value={{orderhistory.dateCreated}} readonly>
+    <p></p>
+    <label for="quantity">Quantity:</label>
+    <input type="text" id="quantity" name="quantity" value={{orderhistory.totalQuantity}} readonly>
+    <p></p>
+    <label for="total">Total(RM):</label>
+    <input type="text" id="total" name="total" value={{orderhistory.totalPrice}} readonly >
+    <p></p>
+    <label for="status">Select status:</label>
+    <select id="status" name="status">
+        <option value="PENDING">PENDING</option>
+        <option value="ONGOING">ONGOING</option>
+        <option value="SHIPPED">SHIPPED</option>
+        <option value="DELIVERED">DELIVERED</option>
+    </select>
+    
+    <p></p>
+  
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+  
+  

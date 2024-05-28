@@ -1,0 +1,17 @@
+.custom-button {
+    color: black;
+    background-color:black;
+   /* Set your desired text/icon color */
+    font-weight: bold;
+    text-align: left;
+    /* Add any other styles you want */
+  }
+
+  .mat-icon{
+    color: white;
+    
+  }
+
+.form-header{
+    padding: 5px;;
+}

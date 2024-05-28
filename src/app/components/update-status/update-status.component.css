@@ -1,0 +1,72 @@
+/* Apply styles to all input fields */
+input {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Remove default focus outline */
+  input:focus {
+    outline: none;
+    background-color: lightblue;
+  }
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px; 
+    /* Horizontally center the form */
+  }
+  form {
+    display: inline-block; /* Auto-sizes to content */
+    text-align: left; /* Align form contents */
+  }
+/* Style inputs, select elements, and textareas */
+input[type="text"],
+select,
+textarea {
+    
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #593535;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical; /* Prevent textareas from being resized */
+}
+
+/* Optional: Add more styling as needed */
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #555; /* Change border color when focused */
+}
+
+/* Optional: Add more specific styling for different input types */
+
+
+/* Optional: Style buttons or submit inputs */
+button[type="submit"] {
+
+  background-color: #3cbc8d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+h1{
+    padding-top: 5%;
+    
+    text-align: center;
+}
+
+
+
+  

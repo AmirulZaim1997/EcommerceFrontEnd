@@ -1,0 +1,82 @@
+<!-- Add a spacer if needed -->
+
+<app-product-category-menu></app-product-category-menu>
+  
+
+
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <!-- Loop over the collection of products -->
+        <div *ngFor="let tempProduct of products" class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <a routerLink="/products/{{ tempProduct.id }}">
+                <img src="{{ tempProduct.imageUrl }}" class="product-image img-responsive" />
+              </a>
+             
+                <h3 class="card-text small">{{ tempProduct.name }}</h3>
+              
+              <p class="tags">{{ tempProduct.unitPrice | currency : "RM" }}</p>
+              <a (click)="addToCart(tempProduct)" target="_blank" class="btn btn-success button-text">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- If no products are found, display a message to the user -->
+        <div *ngIf="products?.length === 0" class="alert alert-warning col-md-12" role="alert">
+          No products found.
+        </div>
+
+      </div>
+
+<!--beggin footer-->
+<p></p>
+<div class=" footer-pagination ">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="col-md-6">
+        <div class="row " style="padding-left: 150%">
+
+          <div class="col-md-6">
+            <ngb-pagination style="color: black;"
+              [(page)]="thePageNumber"
+              [pageSize]="thePageSize"
+              [maxSize]="8"
+              [collectionSize]="theTotalElements"
+              [boundaryLinks]="true"
+              (pageChange)="listProducts()"
+              class="pagination-dark"
+            >
+            </ngb-pagination>
+          </div>
+
+
+          <div class="col-md-6 mt-2" style="text-align:right;">
+            <span class="mr-3">Page Size</span>
+
+            <select (change)="updatePageSize($any($event.target).value)">
+              <option>2</option>
+              <option selected="true">8</option>
+              <option>12</option>
+              <option>16</option>
+              <option>20</option>
+            </select>
+          </div>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end footer-->
+
+    </div>
+  </div>
+</div>

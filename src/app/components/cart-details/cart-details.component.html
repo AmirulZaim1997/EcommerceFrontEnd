@@ -1,0 +1,110 @@
+<h1>Cart</h1>
+
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div *ngIf="cartItems.length > 0">
+      <div style="display: flex;">
+        <table class="table table-bordered" style="border-radius: 10px; border: none;margin-right: 30px;width: 100%;">
+          <tr style="background-color: black;">
+            <th width="20%" style="text-align: center;font-weight: bold; border-top-left-radius: 5px;padding:10px;background-color: black;">PRODUCT</th>
+            <th width="20%" style="text-align: center;background-color: black;"></th>
+            <th width="20%" style="text-align: center;background-color: black;font-size: smaller;">QUANTITY</th>
+            <th width="10%" style="text-align: center;background-color: black;">TOTAL</th>
+            <th width="20%" style="text-align: center;border-top-right-radius: 5px;background-color: black;">ACTION</th>
+          </tr>
+          <tr *ngFor="let tempCartItem of cartItems">
+            <td style="text-align: center;">
+              <img
+                src="{{ tempCartItem.imageUrl }}"
+                class="img-responsive"
+                width="150px"
+              />
+            </td>
+            <td>
+              <p>{{ tempCartItem.name }}</p>
+              <p>{{ tempCartItem.unitPrice | currency : "RM" }}</p>
+            </td>
+            <td>
+              <div class="items" style="text-align: center;">
+                <p></p>
+                <div class="row no-gutters">
+                    <div class="col">
+                      <button (click)="decrementQuantity(tempCartItem)" class="btn btn-primary btn-sm" style="background-color: black;">
+                          <i class="fas fa-minus"></i>
+                      </button>
+                  </div>
+                    <div class="col ml-4 mr-2">
+                        {{tempCartItem.quantity}}
+                    </div>
+                  <div class="col">
+                      <button (click)="incrementQuantity(tempCartItem)" class="btn btn-primary btn-sm" style="background-color: black;">
+                          <i class="fas fa-plus" style="background-color: black;"></i>
+                      </button>
+                  </div>
+                    <div class="col-8"></div>
+                </div>
+              </div>
+              </td>
+              <td style="text-align: center;">
+                <p></p>
+                <p class="mt-2">
+                  {{
+                    tempCartItem.quantity * tempCartItem.unitPrice
+                      | currency : "RM"
+                  }}
+                </p>
+              </td> 
+              <td style="text-align: center;vertical-align: middle;"><button (click)="remove(tempCartItem)" class="btn btn-visibility btn-sm mt-2" style="background-color: black; font-size: small; color:white;">Delete</button></td>
+          </tr>
+        </table>
+        <table style="margin-right: 20px;border-radius: 10px; width: 50%;border-collapse: collapse;  width: 500px; background-color: white;height:300px">
+          <tr style="border:none;">
+             <td colspan="2" style="border:none;text-align: center;font-weight: bold;margin-top:15px;margin-bottom: 2px; font-size: large;">CART TOTALS
+              <p>-----------------------------------------</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0px 40px;text-align: left;"> Total Quantity </td>
+            <td>{{ totalQuantity }}</td>
+          <tr>
+            <td style="padding:0px 40px;text-align: left;">Shipping</td>
+            <td>FREE</td> 
+          </tr>  
+          <tr>
+            <td style="padding:0px 40px;text-align: left;">Total Price</td> 
+            <td>{{ totalPrice | currency : "RM" }}</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding:10px;text-align: center;"><a routerLink="/checkout" class="btn btn-visibility" style="margin-bottom: 10px; font-size: medium; background-color: black;color:white;  width: 200px;
+              border-radius: 30px;padding:10px;">Checkout</a></td> 
+          </tr>
+              
+  
+        </table>
+      </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      <!--if cart is empty then display a message-->
+      <div *ngIf="cartItems.length ==0 " class="alert alert-warning col-md-12" role="alert">
+        Your shopping cart is empty .
+      </div>
+    </div>
+  </div>
+</div>

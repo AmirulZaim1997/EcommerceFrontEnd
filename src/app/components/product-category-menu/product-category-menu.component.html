@@ -1,0 +1,8 @@
+<div class=" cat">
+
+
+<div class="btn-group" *ngFor="let tempProductCategory of productCategories">
+  <button style="width: 100%;" routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">{{ tempProductCategory.categoryName }}</button>
+  
+</div>
+</div>

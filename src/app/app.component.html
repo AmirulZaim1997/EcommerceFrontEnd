@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" class="navbar">
+  <span class="navbar-brand"><button mat-button routerLink="/dashboard" >Winkel</button>
+  </span>
+  <span class="spacer"></span>
+  <app-search></app-search>
+  
+  <button mat-button routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
+  <button mat-button routerLink="/products" routerLinkActive="active">Product</button>
+  <button mat-button routerLink="/order" routerLinkActive="active">Track Order</button>
+  <!-- <button mat-button routerLink="/manageorder" routerLinkActive="active">Manage Order</button> -->
+  <button *ngIf="!isLoggedIn" mat-button routerLink="/login" routerLinkActive="active">Login</button>
+  <button *ngIf="isLoggedIn" mat-button (click)="logout()">Logout</button>
+
+  <app-cart-status> </app-cart-status>
+
+  <p></p>
+  <p></p>
+  <p></p>
+</mat-toolbar>
+
+
+
+
+  <router-outlet><router-outlet />
+
+    <footer *ngIf="isVisible">
+      <ul>
+        <li><h3 href="#">@2024 Group 2 - Winkel E-commerce Website </h3></li>
+        
+      </ul>
+    </footer>

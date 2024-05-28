@@ -1,0 +1,48 @@
+
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let img of images">
+    <img [src]="img.url" alt="Image">
+    <div class="carousel-caption">
+      <p>{{ img.title }}</p>
+      <h3>{{ img.description }}</h3>
+    </div>
+  </ng-template>
+  <!-- Add more slides as needed -->
+</ngb-carousel>
+
+<div>
+  <h1>Our Product</h1>
+  <div class="row">
+    <!--loop over the collection of products-->
+    <div *ngFor="let tempProduct of products" class="col-md-3">
+      <div class="product-box">
+        <a routerLink="/products/{{ tempProduct.id }}">
+          <div class="zoom">
+          <img src="{{ tempProduct.imageUrl }}" class="img-responsive" />
+          </div>
+        </a>
+
+        <h2>{{ tempProduct.name }}</h2>
+        
+        <div class="price">
+          {{ tempProduct.unitPrice | currency : "RM" }}
+        </div>
+       </div>
+    </div>
+
+    <!--if products empty then display message to user-->
+    <div
+      *ngIf="products?.length == 0"
+      class="alert alert-warning col-md-12"
+      role="alert"
+    >
+      No products found.
+    </div>
+  </div>
+</div>
+
+<div class="mymore">
+  <button class="mybutton" routerLink="/products/">More Product</button>
+</div>
+<p></p>
+<p></p>

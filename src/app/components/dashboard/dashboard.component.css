@@ -1,0 +1,108 @@
+
+.product-item-content { 
+    border: 1px solid var(--surface-d); 
+    border-radius: 3px; 
+    margin: 0.3rem; 
+    text-align: center; 
+    padding: 1rem; 
+    background-color: snow; 
+    object-fit: contain;
+} 
+  
+.product-image { 
+    width: 50%; 
+    height: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 
+        0 3px 6px rgba(0, 0, 0, 0.23); 
+} 
+  
+.img-responsive{
+    width: 100%;
+    height: 100%;
+
+}
+
+img {
+    width: 100%;
+    max-width: 100%; /* Set your desired maximum width */
+    height: 700px;
+    max-height: 70%;
+    
+  }
+
+  h1{
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  
+  
+.carousel-caption {
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    color: black;
+    padding-left: 1rem;
+    padding-top: 20%;
+    padding-right: 65%;
+    display: inline-block;
+    font-size:x-large;
+    
+  }
+  
+
+  .row {
+    text-align: center;
+    padding: 20px; /* Center the columns horizontally */
+}
+.col-md-3 {
+    float: none; /* Override default float */
+    display: inline-block; /* Center the columns */
+    text-align: center; /* Reset text alignment within columns */
+}
+.price{
+    color: #000000;
+}
+
+
+  .price{
+    text-align: center;
+
+  }
+
+  .zoom {
+    padding: 50px;
+    
+    transition: transform 0.2s; /* Animation duration */
+    
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.3); /* Zoom in by 150% (adjust as needed) */
+}
+
+.mybutton{
+    
+    border-radius: 200px;
+    width: 30%;
+    background-color: #ededed; /* Green */
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+}
+.mybutton:hover {
+    background-color: #000000; /* Blue */
+    color: white;
+}
+
+.mymore{
+   text-align: center;
+   padding-bottom: 3%;
+    
+}
+

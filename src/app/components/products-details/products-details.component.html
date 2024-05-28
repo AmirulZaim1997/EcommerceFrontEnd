@@ -1,0 +1,27 @@
+
+
+
+<div class="container-fluid" style="margin-top: 80px;">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="{{product.imageUrl}}" class="product-image1 img-fluid">
+              </div>
+              <div class="col-md-8" style="margin-top: 150px;">
+                <h3 class="card-title">{{product.name}}</h3>
+                <p class="card-text small">{{product.description}}</p>
+                <p class="tags">{{product.unitPrice | currency:'RM'}}</p>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <a (click)="addToCart()" target="_blank" class="btn btn-success button-text">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart
+                </a>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  

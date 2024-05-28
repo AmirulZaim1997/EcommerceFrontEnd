@@ -1,0 +1,55 @@
+.my-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .my-table th, .my-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .my-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .my-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  .my-button1 {
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+}
+  
+  .my-button1:hover {
+    background-color: #2980b9;
+  }
+  .my-button2 {
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #db3434;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+}
+  
+  .my-button2:hover {
+    background-color: #b92929;
+  }
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Adjust the number of columns as needed */
+    gap: 10px; /* Adjust the gap size as needed */
+  }
+  
